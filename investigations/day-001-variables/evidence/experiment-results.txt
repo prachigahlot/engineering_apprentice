@@ -1,0 +1,22 @@
+﻿Experiment: Configuration State Inspector
+Date: 2026-10-21
+Environment: Java 21, Maven
+
+Test suite:
+- Tests run: 7
+- Failures: 0
+- Errors: 0
+- Skipped: 0
+- Result: BUILD SUCCESS
+
+Normal transition:
+Input: retries int 3 4
+Observed: before=3, after=4, returned value=4
+
+Upper boundary:
+Input: retries int 3 100
+Observed: before=3, after=100, returned value=100
+
+Above upper boundary:
+Input: retries int 3 101
+Observed: Error: Integer must be between 0 and 100.
